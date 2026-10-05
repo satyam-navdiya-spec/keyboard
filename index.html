@@ -3,91 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>KeyCraft India — Mechanical Keyboards with Devanagari Keycaps</title>
+<title>KeyCraft — Mechanical Keyboards with Devanagari Keycaps</title>
 <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#FBF4E4;--card:#FFFFFF;--ink:#1B1A17;--mute:#6B6558;--line:#E6DCC4;--haldi:#F2A900;--indigo:#1F2A5C;--kumkum:#C8102E;--cap:#F3E9CF;--dark:#1F2A5C;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#14162B;--card:#1D2040;--ink:#F6EFDD;--mute:#B5AE9C;--line:#2F3358;--cap:#EADFC2;--dark:#0C0E20}}
-:root[data-theme="dark"]{--paper:#14162B;--card:#1D2040;--ink:#F6EFDD;--mute:#B5AE9C;--line:#2F3358;--cap:#EADFC2;--dark:#0C0E20}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
-body{background:var(--paper);color:var(--ink);font-family:Hind,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
-h1,h2,h3,.brand{font-family:"Yatra One",Georgia,serif;font-weight:400;line-height:1.1}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
-:focus-visible{outline:3px solid var(--haldi);outline-offset:2px}
-.strip{background:var(--kumkum);color:#fff;text-align:center;font-size:14px;padding:8px 12px;font-weight:600}
-header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.brand{font-size:26px;display:flex;align-items:center;gap:10px}
-.brand i{width:36px;height:36px;border-radius:8px;background:var(--indigo);color:var(--haldi);display:grid;place-items:center;font-style:normal;font-size:20px}
-.links{display:flex;gap:26px;font-weight:600;font-size:15px}
-.links a:hover{color:var(--kumkum)}
-.cart{background:var(--ink);color:var(--paper);border:0;border-radius:99px;padding:9px 16px;font:600 14px Hind,sans-serif;cursor:pointer}
-.btn{display:inline-block;padding:14px 26px;border-radius:10px;font-weight:700;border:2px solid var(--ink);cursor:pointer;font-family:inherit;font-size:16px}
-.btn.p{background:var(--indigo);border-color:var(--indigo);color:#fff}
-.btn.p:hover{background:var(--kumkum);border-color:var(--kumkum)}
-.btn.s:hover{background:var(--haldi);border-color:var(--haldi);color:#1B1A17}
-.hero{padding:56px 0 64px;background:radial-gradient(circle at 85% 20%,rgba(242,169,0,.22),transparent 45%)}
-.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
-.tag{display:inline-block;border:1.5px solid var(--indigo);color:var(--indigo);border-radius:99px;padding:4px 14px;font-weight:600;font-size:14px}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag{color:var(--haldi);border-color:var(--haldi)}}
-h1{font-size:clamp(40px,6vw,72px);margin:18px 0}
-h1 em{font-style:normal;color:var(--kumkum)}
-.lead{font-size:19px;color:var(--mute);max-width:520px}
-.cta{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0}
-.proof{display:flex;gap:28px;flex-wrap:wrap;color:var(--mute);font-size:14px}
-.proof b{display:block;color:var(--ink);font-size:20px}
-.board{background:var(--dark);border-radius:22px;padding:22px;box-shadow:0 30px 60px rgba(31,42,92,.35);transform:rotate(-2deg)}
-.board .top{display:flex;justify-content:space-between;color:#fff;margin-bottom:14px;font-size:14px}
-.board .top span{opacity:.6}
-.keys{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;background:#0F1536;padding:12px;border-radius:14px}
-.k{aspect-ratio:1;border-radius:7px;background:var(--cap);color:#1B1A17;display:grid;place-items:center;font-size:clamp(11px,1.6vw,17px);font-weight:700;box-shadow:0 3px 0 #BFB290;transition:transform .15s}
-.k:hover,.k.on{transform:translateY(3px);box-shadow:0 0 0 #BFB290}
-.k.h{background:var(--haldi)}.k.r{background:var(--kumkum);color:#fff;box-shadow:0 3px 0 #7d0a1d}
-.board .sp{grid-column:3/9;aspect-ratio:auto;height:100%}
-.hint{color:#fff;opacity:.55;font-size:13px;margin-top:12px;text-align:center}
-.trust{border-block:1px solid var(--line);background:var(--card)}
-.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-block:18px;font-weight:600;font-size:15px}
-.sec{padding:80px 0}
-.sec h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:10px}
-.sub{color:var(--mute);max-width:560px;margin-bottom:36px;font-size:18px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
-.pv{border-radius:12px;padding:20px;display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin-bottom:18px}
-.pv span{aspect-ratio:1;border-radius:5px;display:grid;place-items:center;font-size:13px;font-weight:700}
-.row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
-.price{font-family:"Yatra One",serif;font-size:24px}
-.card small{color:var(--mute);display:block}
-.emi{color:var(--kumkum);font-weight:600;font-size:13px;margin-top:6px}
-.badge{font-size:12px;font-weight:700;background:var(--haldi);color:#1B1A17;padding:2px 10px;border-radius:99px}
-.fit{background:var(--indigo);color:#fff}
-.fit .sub{color:#C9CDE8}
-.fit .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)}
-.fit h3{font-size:24px;margin-bottom:8px;color:var(--haldi)}
-.fit p{color:#D5D8EE}
-.why{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.why .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.why h3{font-size:20px;margin-bottom:6px}.why p{color:var(--mute);font-size:15px}
-.quote{background:var(--haldi);color:#1B1A17;text-align:center;padding:72px 0}
-.quote blockquote{font-family:"Yatra One",serif;font-size:clamp(26px,4vw,42px);line-height:1.25;max-width:860px;margin:0 auto 20px}
-.news{background:var(--kumkum);color:#fff;border-radius:22px;padding:56px 36px}
-.news h2{max-width:560px}
-.news form{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
-.news input{flex:1;min-width:220px;padding:14px 18px;border-radius:10px;border:0;font:16px Hind,sans-serif}
-.news button{background:var(--ink);color:#fff;border:0;border-radius:10px;padding:14px 26px;font:700 16px Hind,sans-serif;cursor:pointer}
-footer{background:var(--dark);color:#D5D8EE;padding:48px 0 28px;margin-top:80px}
-footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
-footer h4{color:#fff;margin-bottom:10px}
-footer a{display:block;font-size:15px;padding:3px 0;opacity:.8}footer a:hover{opacity:1;color:var(--haldi)}
-.legal{border-top:1px solid rgba(255,255,255,.15);margin-top:28px;padding-top:18px;font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media(max-width:860px){.links{display:none}.hero .wrap,.why,.grid3,footer .cols{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.sec{padding:56px 0}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+box-sizing:border-box;padding-top:env(safe-area-inset-top,
+    0px);padding-bottom:env(safe-area-inset-bottom,
+    0px)
+}
+@media(prefers-color-scheme:dark){
+    :root:not([data-theme="light"
+    ]){--paper:#14162B;--card:#1D2040;--ink:#F6EFDD;--mute:#B5AE9C;--line:#2F3358;--cap:#EADFC2;--dark:#0C0E20
+    }
+}
+:root[data-theme="dark"
+]{--paper:#14162B;--card:#1D2040;--ink:#F6EFDD;--mute:#B5AE9C;--line:#2F3358;--cap:#EADFC2;--dark:#0C0E20
+}
+*{box-sizing:border-box;margin: 0
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,
+    0px) + 80px)
+}
+body{background:var(--paper);color:var(--ink);font-family:Hind,system-ui,-apple-system,
+    "Segoe UI",sans-serif;line-height: 1.6;overflow-x:hidden
+}
+h1,h2,h3,.brand{font-family: "Yatra One",Georgia,serif;font-weight: 400;line-height: 1.1
+}
+a{color:inherit;text-decoration:none
+}
+.wrap{max-width: 1160px;margin: 0 auto;padding: 0 20px
+}
+:focus-visible{outline: 3px solid var(--haldi);outline-offset: 2px
+}
+.strip{background:var(--kumkum);color:#fff;text-align:center;font-size: 14px;padding: 8px 12px;font-weight: 600
+}
+header{position:sticky;top: 0;z-index: 20;background:var(--paper);border-bottom: 1px solid var(--line)
+}
+nav{display:flex;align-items:center;justify-content:space-between;height: 68px
+}
+.brand{font-size: 26px;display:flex;align-items:center;gap: 10px
+}
+.brand i{width: 36px;height: 36px;border-radius: 8px;background:var(--indigo);color:var(--haldi);display:grid;place-items:center;font-style:normal;font-size: 20px
+}
+.links{display:flex;gap: 26px;font-weight: 600;font-size: 15px
+}
+.links a:hover{color:var(--kumkum)
+}
+.cart{background:var(--ink);color:var(--paper);border: 0;border-radius: 99px;padding: 9px 16px;font: 600 14px Hind,sans-serif;cursor:pointer
+}
+.btn{display:inline-block;padding: 14px 26px;border-radius: 10px;font-weight: 700;border: 2px solid var(--ink);cursor:pointer;font-family:inherit;font-size: 16px
+}
+.btn.p{background:var(--indigo);border-color:var(--indigo);color:#fff
+}
+.btn.p:hover{background:var(--kumkum);border-color:var(--kumkum)
+}
+.btn.s:hover{background:var(--haldi);border-color:var(--haldi);color:#1B1A17
+}
+.hero{padding: 56px 0 64px;background:radial-gradient(circle at 85% 20%,rgba(242,
+    169,
+    0,.22),transparent 45%)
+}
+.hero .wrap{display:grid;grid-template-columns: 1.05fr 1fr;gap: 48px;align-items:center
+}
+.tag{display:inline-block;border: 1.5px solid var(--indigo);color:var(--indigo);border-radius: 99px;padding: 4px 14px;font-weight: 600;font-size: 14px
+}
+@media(prefers-color-scheme:dark){
+    :root:not([data-theme="light"
+    ]) .tag{color:var(--haldi);border-color:var(--haldi)
+    }
+}
+h1{font-size:clamp(40px,
+    6vw,
+    72px);margin: 18px 0
+}
+h1 em{font-style:normal;color:var(--kumkum)
+}
+.lead{font-size: 19px;color:var(--mute);max-width: 520px
+}
+.cta{display:flex;gap: 14px;flex-wrap:wrap;margin: 28px 0
+}
+.proof{display:flex;gap: 28px;flex-wrap:wrap;color:var(--mute);font-size: 14px
+}
+.proof b{display:block;color:var(--ink);font-size: 20px
+}
+.board{background:var(--dark);border-radius: 22px;padding: 22px;box-shadow: 0 30px 60px rgba(31,
+    42,
+    92,.35);transform:rotate(-2deg)
+}
+.board .top{display:flex;justify-content:space-between;color:#fff;margin-bottom: 14px;font-size: 14px
+}
+.board .top span{opacity:.6
+}
+.keys{display:grid;grid-template-columns:repeat(10,
+    1fr);gap: 6px;background:#0F1536;padding: 12px;border-radius: 14px
+}
+.k{aspect-ratio: 1;border-radius: 7px;background:var(--cap);color:#1B1A17;display:grid;place-items:center;font-size:clamp(11px,
+    1.6vw,
+    17px);font-weight: 700;box-shadow: 0 3px 0 #BFB290;transition:transform .15s
+}
+.k:hover,.k.on{transform:translateY(3px);box-shadow: 0 0 0 #BFB290
+}
+.k.h{background:var(--haldi)
+}.k.r{background:var(--kumkum);color:#fff;box-shadow: 0 3px 0 #7d0a1d
+}
+.board .sp{grid-column: 3/9;aspect-ratio:auto;height: 100%
+}
+.hint{color:#fff;opacity:.55;font-size: 13px;margin-top: 12px;text-align:center
+}
+.trust{border-block: 1px solid var(--line);background:var(--card)
+}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,
+    1fr);gap: 16px;padding-block: 18px;font-weight: 600;font-size: 15px
+}
+.sec{padding: 80px 0
+}
+.sec h2{font-size:clamp(30px,
+    4.5vw,
+    46px);margin-bottom: 10px
+}
+.sub{color:var(--mute);max-width: 560px;margin-bottom: 36px;font-size: 18px
+}
+.grid3{display:grid;grid-template-columns:repeat(3,
+    1fr);gap: 24px
+}
+.card{background:var(--card);border: 1px solid var(--line);border-radius: 18px;padding: 22px
+}
+.pv{border-radius: 12px;padding: 20px;display:grid;grid-template-columns:repeat(8,
+    1fr);gap: 5px;margin-bottom: 18px
+}
+.pv span{aspect-ratio: 1;border-radius: 5px;display:grid;place-items:center;font-size: 13px;font-weight: 700
+}
+.row{display:flex;justify-content:space-between;gap: 12px;align-items:flex-start
+}
+.price{font-family: "Yatra One",serif;font-size: 24px
+}
+.card small{color:var(--mute);display:block
+}
+.emi{color:var(--kumkum);font-weight: 600;font-size: 13px;margin-top: 6px
+}
+.badge{font-size: 12px;font-weight: 700;background:var(--haldi);color:#1B1A17;padding: 2px 10px;border-radius: 99px
+}
+.fit{background:var(--indigo);color:#fff
+}
+.fit .sub{color:#C9CDE8
+}
+.fit .card{background:rgba(255,
+    255,
+    255,.07);border-color:rgba(255,
+    255,
+    255,.15)
+}
+.fit h3{font-size: 24px;margin-bottom: 8px;color:var(--haldi)
+}
+.fit p{color:#D5D8EE
+}
+.why{display:grid;grid-template-columns: 1fr 1fr;gap: 48px;align-items:center
+}
+.why .grid2{display:grid;grid-template-columns: 1fr 1fr;gap: 16px
+}
+.why h3{font-size: 20px;margin-bottom: 6px
+}.why p{color:var(--mute);font-size: 15px
+}
+.quote{background:var(--haldi);color:#1B1A17;text-align:center;padding: 72px 0
+}
+.quote blockquote{font-family: "Yatra One",serif;font-size:clamp(26px,
+    4vw,
+    42px);line-height: 1.25;max-width: 860px;margin: 0 auto 20px
+}
+.news{background:var(--kumkum);color:#fff;border-radius: 22px;padding: 56px 36px
+}
+.news h2{max-width: 560px
+}
+.news form{display:flex;gap: 10px;margin-top: 22px;flex-wrap:wrap
+}
+.news input{flex: 1;min-width: 220px;padding: 14px 18px;border-radius: 10px;border: 0;font: 16px Hind,sans-serif
+}
+.news button{background:var(--ink);color:#fff;border: 0;border-radius: 10px;padding: 14px 26px;font: 700 16px Hind,sans-serif;cursor:pointer
+}
+footer{background:var(--dark);color:#D5D8EE;padding: 48px 0 28px;margin-top: 80px
+}
+footer .cols{display:grid;grid-template-columns: 2fr 1fr 1fr;gap: 32px
+}
+footer h4{color:#fff;margin-bottom: 10px
+}
+footer a{display:block;font-size: 15px;padding: 3px 0;opacity:.8
+}footer a:hover{opacity: 1;color:var(--haldi)
+}
+.legal{border-top: 1px solid rgba(255,
+    255,
+    255,.15);margin-top: 28px;padding-top: 18px;font-size: 14px;display:flex;justify-content:space-between;gap: 12px;flex-wrap:wrap
+}
+@media(max-width: 860px){.links{display:none
+    }.hero .wrap,.why,.grid3,footer .cols{grid-template-columns: 1fr
+    }.trust .wrap{grid-template-columns: 1fr 1fr
+    }.sec{padding: 56px 0
+    }
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important
+    }
+}
 </style>
 </head>
 <body>
-<div class="strip">Diwali sale: ₹1,500 off on all boards · Free shipping across India on orders above ₹999</div>
+<div class="strip">Diwali sale: ₹1,
+500 off on all boards · Free shipping across India on orders above ₹999</div>
 <header>
 <div class="wrap"><nav>
 <a href="#home" class="brand"><i>क</i>KeyCraft</a>
@@ -102,7 +221,8 @@ footer a{display:block;font-size:15px;padding:3px 0;opacity:.8}footer a:hover{op
 <h1>Type in हिंदी. Type in English. <em>Type better.</em></h1>
 <p class="lead">Premium mechanical keyboards with dual-legend keycaps for Hindi, Gujarati and Tamil, built for coders, creators and gamers across India.</p>
 <div class="cta"><a class="btn p" href="#shop">Shop keyboards</a><a class="btn s" href="#fit">Find your fit</a></div>
-<div class="proof"><div><b>25,000+</b>Happy typists</div><div><b>4.8/5</b>Rated on Amazon.in</div><div><b>2 years</b>Warranty, pan-India service</div></div>
+<div class="proof"><div><b>25,
+000+</b>Happy typists</div><div><b>4.8/5</b>Rated on Amazon.in</div><div><b>2 years</b>Warranty, pan-India service</div></div>
 </div>
 <div>
 <div class="board" aria-label="KeyCraft One keyboard preview">
@@ -121,14 +241,19 @@ footer a{display:block;font-size:15px;padding:3px 0;opacity:.8}footer a:hover{op
 <p class="sub">The boards our community keeps coming back to. Prices include GST.</p>
 <div class="grid3">
 <article class="card"><div class="pv" style="background:#1F2A5C" data-p="a"></div>
-<div class="row"><div><h3>KeyCraft One</h3><small>75% · Hot-swappable · Wireless</small></div><div class="price">₹11,999</div></div>
-<div class="emi">No-cost EMI from ₹1,000/month</div><p style="margin-top:8px"><span class="badge">Bestseller</span></p></article>
+<div class="row"><div><h3>KeyCraft One</h3><small>75% · Hot-swappable · Wireless</small></div><div class="price">₹11,
+999</div></div>
+<div class="emi">No-cost EMI from ₹1,
+000/month</div><p style="margin-top:8px"><span class="badge">Bestseller</span></p></article>
 <article class="card"><div class="pv" style="background:#E9DFC4" data-p="b"></div>
-<div class="row"><div><h3>KeyCraft Mini</h3><small>65% · Wireless · RGB</small></div><div class="price">₹8,999</div></div>
+<div class="row"><div><h3>KeyCraft Mini</h3><small>65% · Wireless · RGB</small></div><div class="price">₹8,
+999</div></div>
 <div class="emi">No-cost EMI from ₹750/month</div><p style="margin-top:8px"><span class="badge">New</span></p></article>
 <article class="card"><div class="pv" style="background:#3A1020" data-p="c"></div>
-<div class="row"><div><h3>KeyCraft Pro</h3><small>TKL · Aluminium · RGB</small></div><div class="price">₹14,999</div></div>
-<div class="emi">No-cost EMI from ₹1,250/month</div></article>
+<div class="row"><div><h3>KeyCraft Pro</h3><small>TKL · Aluminium · RGB</small></div><div class="price">₹14,
+999</div></div>
+<div class="emi">No-cost EMI from ₹1,
+250/month</div></article>
 </div>
 </section>
 
@@ -188,17 +313,47 @@ footer a{display:block;font-size:15px;padding:3px 0;opacity:.8}footer a:hover{op
 (function(){
 var L="कखगघचछजझटठडढतथदधनपफबभमयरलवशसह".split("");
 var keys=document.getElementById("keys"),h="";
-for(var i=0;i<30;i++){var c=i===4||i===13||i===22?"h":(i===9?"r":"");h+='<div class="k '+c+'">'+L[i]+'</div>'}
+for(var i=0;i<30;i++){var c=i===4||i===13||i===22?"h":(i===9?"r": "");h+='<div class="k '+c+'">'+L[i
+        ]+'</div>'
+    }
 h+='<div class="k sp r">स्पेस</div>';
 keys.innerHTML=h;
-var cols=[["#F2A900","#1B1A17"],["#1F2A5C","#fff"],["#C8102E","#fff"]];
+var cols=[
+        [
+            "#F2A900",
+            "#1B1A17"
+        ],
+        [
+            "#1F2A5C",
+            "#fff"
+        ],
+        [
+            "#C8102E",
+            "#fff"
+        ]
+    ];
 document.querySelectorAll(".pv").forEach(function(el,n){
-var pal={a:["#F3E9CF","#F2A900"],b:["#1B1A17","#C8102E"],c:["#EADFC2","#F2A900"]}[el.dataset.p],s="";
+var pal={a: [
+                "#F3E9CF",
+                "#F2A900"
+            ],b: [
+                "#1B1A17",
+                "#C8102E"
+            ],c: [
+                "#EADFC2",
+                "#F2A900"
+            ]
+        }[el.dataset.p
+        ],s="";
 var t="क ख ग घ च छ ज झ ट ठ ड ढ त थ द ध न प फ ब भ म य र ल व श ष स ह".split(" ");
-for(var i=0;i<32;i++){var a=i%11===3;s+='<span style="background:'+(a?pal[1]:pal[0])+';color:'+(pal[0]==="#1B1A17"?"#fff":"#1B1A17")+'">'+t[i%t.length]+'</span>'}
-el.innerHTML=s});
+for(var i=0;i<32;i++){var a=i%11===3;s+='<span style="background:'+(a?pal[1]:pal[0])+';color:'+(pal[0]==="#1B1A17"?"#fff":"#1B1A17")+'">'+t[i%t.length
+            ]+'</span>'
+        }
+el.innerHTML=s
+    });
 var f=document.getElementById("nf");
-f.addEventListener("submit",function(e){e.preventDefault();document.getElementById("nm").hidden=false;f.reset()});
+f.addEventListener("submit",function(e){e.preventDefault();document.getElementById("nm").hidden=false;f.reset()
+    });
 })();
 </script>
 </body>
